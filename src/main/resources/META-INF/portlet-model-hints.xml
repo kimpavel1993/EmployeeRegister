@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ru.isands.model.Bank">
+		<field name="bankId" type="long" />
+		<field name="name" type="String" />
+		<field name="bik" type="long" />
+		<field name="streetAddress" type="String" />
+	</model>
+	<model name="ru.isands.model.Employee">
+		<field name="employeeId" type="long" />
+		<field name="lastName" type="String" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="sex" type="String" />
+		<field name="birthdayDate" type="Date" />
+		<field name="positionId" type="long" />
+		<field name="employmentDate" type="Date" />
+		<field name="salary" type="String" />
+		<field name="workPhone" type="String" />
+		<field name="mobilePhone" type="String" />
+		<field name="bankId" type="long" />
+		<field name="isArchived" type="Boolean" />
+	</model>
+	<model name="ru.isands.model.Position">
+		<field name="positionId" type="long" />
+		<field name="name" type="String" />
+		<field name="isArchived" type="Boolean" />
+	</model>
+</model-hints>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="ru.isands.model.Bank" />
+	<import class="ru.isands.model.Employee" />
+	<import class="ru.isands.model.Position" />
+	<class name="ru.isands.model.impl.BankImpl" table="Employee_Bank">
+		<cache usage="read-write" />
+		<id name="bankId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bik" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="streetAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="ru.isands.model.impl.EmployeeImpl" table="Employee_Employee">
+		<cache usage="read-write" />
+		<id name="employeeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="middleName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sex" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="birthdayDate" type="org.hibernate.type.TimestampType" />
+		<property name="positionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employmentDate" type="org.hibernate.type.TimestampType" />
+		<property name="salary" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="workPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mobilePhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bankId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isArchived" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="ru.isands.model.impl.PositionImpl" table="Employee_Position">
+		<cache usage="read-write" />
+		<id name="positionId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isArchived" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+</hibernate-mapping>
