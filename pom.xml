@@ -7,6 +7,14 @@
 	<packaging>war</packaging>
 	<name>EmployeeRegister Portlet</name>
 	<version>1.0-SNAPSHOT</version>
+	<properties>
+		<liferay.version>6.2.1</liferay.version>
+		<liferay.maven.plugin.version>6.2.1</liferay.maven.plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<projectname>EmployeeRegister</projectname>
+		<envClassifier>none</envClassifier>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -27,6 +35,7 @@
 					<appServerLibGlobalDir>${liferay.app.server.lib.global.dir}</appServerLibGlobalDir>
 					<appServerPortalDir>${liferay.app.server.portal.dir}</appServerPortalDir>
 					<liferayVersion>${liferay.version}</liferayVersion>
+					<pluginName>${project.artifactId}-${project.version}</pluginName>
 					<pluginType>portlet</pluginType>
 				</configuration>
 			</plugin>

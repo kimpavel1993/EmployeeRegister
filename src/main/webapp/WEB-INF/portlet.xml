@@ -4,10 +4,10 @@
 	<portlet>
 		<portlet-name>EmployeeRegister</portlet-name>
 		<display-name>EmployeeRegister</display-name>
-		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<portlet-class>ru.isands.portlet.BankListingPortlet</portlet-class>
 		<init-param>
 			<name>view-template</name>
-			<value>/view/main-bank.jsp</value>
+			<value>/view/bank/main-bank.jsp</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
