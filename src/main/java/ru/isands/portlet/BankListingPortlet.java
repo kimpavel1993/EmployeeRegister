@@ -1,14 +1,9 @@
 package ru.isands.portlet;
 
 import com.liferay.counter.service.CounterLocalServiceUtil;
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.servlet.SessionErrors;
-import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 import ru.isands.model.Bank;
-import ru.isands.model.impl.BankImpl;
 import ru.isands.service.BankLocalServiceUtil;
 
 import javax.portlet.ActionRequest;
@@ -65,14 +60,4 @@ public class BankListingPortlet extends MVCPortlet {
             e.printStackTrace();
         }
     }
-
-  /*  public void getBank(ActionRequest actionRequest,
-                        ActionResponse actionResponse) throws IOException, PortletException {
-        try {
-            long bankId = ParamUtil.getLong(actionRequest, "bankId");
-          BankLocalServiceUtil.getBank(bankId);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
 }
