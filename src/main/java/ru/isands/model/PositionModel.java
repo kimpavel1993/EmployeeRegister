@@ -123,19 +123,19 @@ public interface PositionModel extends BaseModel<Position> {
     public Object clone();
 
     @Override
-    public int compareTo(Position position);
+    public int compareTo(ru.isands.model.Position position);
 
     @Override
     public int hashCode();
 
     @Override
-    public CacheModel<Position> toCacheModel();
+    public CacheModel<ru.isands.model.Position> toCacheModel();
 
     @Override
-    public Position toEscapedModel();
+    public ru.isands.model.Position toEscapedModel();
 
     @Override
-    public Position toUnescapedModel();
+    public ru.isands.model.Position toUnescapedModel();
 
     @Override
     public String toString();

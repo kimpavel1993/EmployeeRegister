@@ -138,19 +138,19 @@ public interface BankModel extends BaseModel<Bank> {
     public Object clone();
 
     @Override
-    public int compareTo(Bank bank);
+    public int compareTo(ru.isands.model.Bank bank);
 
     @Override
     public int hashCode();
 
     @Override
-    public CacheModel<Bank> toCacheModel();
+    public CacheModel<ru.isands.model.Bank> toCacheModel();
 
     @Override
-    public Bank toEscapedModel();
+    public ru.isands.model.Bank toEscapedModel();
 
     @Override
-    public Bank toUnescapedModel();
+    public ru.isands.model.Bank toUnescapedModel();
 
     @Override
     public String toString();

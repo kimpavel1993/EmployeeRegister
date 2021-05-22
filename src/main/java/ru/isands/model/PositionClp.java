@@ -23,6 +23,7 @@ public class PositionClp extends BaseModelImpl<Position> implements Position {
     private String _name;
     private Boolean _isArchived;
     private BaseModel<?> _positionRemoteModel;
+    private Class<?> _clpSerializerClass = ru.isands.service.ClpSerializer.class;
 
     public PositionClp() {
     }
@@ -261,6 +262,10 @@ public class PositionClp extends BaseModelImpl<Position> implements Position {
         } else {
             return false;
         }
+    }
+
+    public Class<?> getClpSerializerClass() {
+        return _clpSerializerClass;
     }
 
     @Override

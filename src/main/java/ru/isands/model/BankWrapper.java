@@ -235,7 +235,7 @@ public class BankWrapper implements Bank, ModelWrapper<Bank> {
     }
 
     @Override
-    public int compareTo(Bank bank) {
+    public int compareTo(ru.isands.model.Bank bank) {
         return _bank.compareTo(bank);
     }
 
@@ -245,17 +245,17 @@ public class BankWrapper implements Bank, ModelWrapper<Bank> {
     }
 
     @Override
-    public com.liferay.portal.model.CacheModel<Bank> toCacheModel() {
+    public com.liferay.portal.model.CacheModel<ru.isands.model.Bank> toCacheModel() {
         return _bank.toCacheModel();
     }
 
     @Override
-    public Bank toEscapedModel() {
+    public ru.isands.model.Bank toEscapedModel() {
         return new BankWrapper(_bank.toEscapedModel());
     }
 
     @Override
-    public Bank toUnescapedModel() {
+    public ru.isands.model.Bank toUnescapedModel() {
         return new BankWrapper(_bank.toUnescapedModel());
     }
 

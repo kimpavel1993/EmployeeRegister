@@ -271,19 +271,19 @@ public interface EmployeeModel extends BaseModel<Employee> {
     public Object clone();
 
     @Override
-    public int compareTo(Employee employee);
+    public int compareTo(ru.isands.model.Employee employee);
 
     @Override
     public int hashCode();
 
     @Override
-    public CacheModel<Employee> toCacheModel();
+    public CacheModel<ru.isands.model.Employee> toCacheModel();
 
     @Override
-    public Employee toEscapedModel();
+    public ru.isands.model.Employee toEscapedModel();
 
     @Override
-    public Employee toUnescapedModel();
+    public ru.isands.model.Employee toUnescapedModel();
 
     @Override
     public String toString();

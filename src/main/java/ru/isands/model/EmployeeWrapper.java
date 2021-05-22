@@ -479,7 +479,7 @@ public class EmployeeWrapper implements Employee, ModelWrapper<Employee> {
     }
 
     @Override
-    public int compareTo(Employee employee) {
+    public int compareTo(ru.isands.model.Employee employee) {
         return _employee.compareTo(employee);
     }
 
@@ -489,17 +489,17 @@ public class EmployeeWrapper implements Employee, ModelWrapper<Employee> {
     }
 
     @Override
-    public com.liferay.portal.model.CacheModel<Employee> toCacheModel() {
+    public com.liferay.portal.model.CacheModel<ru.isands.model.Employee> toCacheModel() {
         return _employee.toCacheModel();
     }
 
     @Override
-    public Employee toEscapedModel() {
+    public ru.isands.model.Employee toEscapedModel() {
         return new EmployeeWrapper(_employee.toEscapedModel());
     }
 
     @Override
-    public Employee toUnescapedModel() {
+    public ru.isands.model.Employee toUnescapedModel() {
         return new EmployeeWrapper(_employee.toUnescapedModel());
     }
 

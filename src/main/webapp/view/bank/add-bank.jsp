@@ -3,21 +3,17 @@
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <portlet:defineObjects/>
 
-<portlet:renderURL var="mainBankURL">
-    <portlet:param name="mvcPath" value="/view/bank/main-bank.jsp"/>
-</portlet:renderURL>
-
 <portlet:actionURL name="addBank" var="addBankURL"/>
 
 <aui:form action="<%= addBankURL %>" name="<portlet:namespace />fm">
     <aui:fieldset>
-        <aui:input name="name" label="Name">
+        <aui:input name="name" label="Bank">
             <aui:validator name="required"/>
         </aui:input>
 
         <aui:input name="bik" label="BIK">
             <aui:validator name="digits"/>
-            <aui:validator name="required"/>
+            <aui:validator name="required "/>
         </aui:input>
 
         <aui:input name="streetAddress" label="Street Address">
@@ -25,8 +21,12 @@
         </aui:input>
     </aui:fieldset>
 
+    <portlet:renderURL var="mainBankURL">
+        <portlet:param name="mvcPath" value="/view/bank/main-bank.jsp"/>
+    </portlet:renderURL>
+
     <aui:button-row>
-        <aui:button type="submit"/>
+        <aui:button type="submit" />
         <aui:button type="cancel" onClick="<%= mainBankURL %>"/>
     </aui:button-row>
 </aui:form>

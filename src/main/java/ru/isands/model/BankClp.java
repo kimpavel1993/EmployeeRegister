@@ -24,6 +24,7 @@ public class BankClp extends BaseModelImpl<Bank> implements Bank {
     private long _bik;
     private String _streetAddress;
     private BaseModel<?> _bankRemoteModel;
+    private Class<?> _clpSerializerClass = ru.isands.service.ClpSerializer.class;
 
     public BankClp() {
     }
@@ -292,6 +293,10 @@ public class BankClp extends BaseModelImpl<Bank> implements Bank {
         } else {
             return false;
         }
+    }
+
+    public Class<?> getClpSerializerClass() {
+        return _clpSerializerClass;
     }
 
     @Override

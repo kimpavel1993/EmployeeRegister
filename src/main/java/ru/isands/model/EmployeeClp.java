@@ -34,6 +34,7 @@ public class EmployeeClp extends BaseModelImpl<Employee> implements Employee {
     private long _bankId;
     private Boolean _isArchived;
     private BaseModel<?> _employeeRemoteModel;
+    private Class<?> _clpSerializerClass = ru.isands.service.ClpSerializer.class;
 
     public EmployeeClp() {
     }
@@ -572,6 +573,10 @@ public class EmployeeClp extends BaseModelImpl<Employee> implements Employee {
         } else {
             return false;
         }
+    }
+
+    public Class<?> getClpSerializerClass() {
+        return _clpSerializerClass;
     }
 
     @Override

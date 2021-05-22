@@ -2,6 +2,7 @@ package ru.isands.service;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.search.IndexableType;
 import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
@@ -39,6 +40,7 @@ public interface PositionLocalService extends BaseLocalService,
     * @return the position that was added
     * @throws SystemException if a system exception occurred
     */
+    @com.liferay.portal.kernel.search.Indexable(type = IndexableType.REINDEX)
     public ru.isands.model.Position addPosition(
         ru.isands.model.Position position)
         throws com.liferay.portal.kernel.exception.SystemException;
@@ -59,6 +61,7 @@ public interface PositionLocalService extends BaseLocalService,
     * @throws PortalException if a position with the primary key could not be found
     * @throws SystemException if a system exception occurred
     */
+    @com.liferay.portal.kernel.search.Indexable(type = IndexableType.DELETE)
     public ru.isands.model.Position deletePosition(long positionId)
         throws com.liferay.portal.kernel.exception.PortalException,
             com.liferay.portal.kernel.exception.SystemException;
@@ -70,6 +73,7 @@ public interface PositionLocalService extends BaseLocalService,
     * @return the position that was removed
     * @throws SystemException if a system exception occurred
     */
+    @com.liferay.portal.kernel.search.Indexable(type = IndexableType.DELETE)
     public ru.isands.model.Position deletePosition(
         ru.isands.model.Position position)
         throws com.liferay.portal.kernel.exception.SystemException;
@@ -208,6 +212,7 @@ public interface PositionLocalService extends BaseLocalService,
     * @return the position that was updated
     * @throws SystemException if a system exception occurred
     */
+    @com.liferay.portal.kernel.search.Indexable(type = IndexableType.REINDEX)
     public ru.isands.model.Position updatePosition(
         ru.isands.model.Position position)
         throws com.liferay.portal.kernel.exception.SystemException;

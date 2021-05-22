@@ -208,7 +208,7 @@ public class PositionWrapper implements Position, ModelWrapper<Position> {
     }
 
     @Override
-    public int compareTo(Position position) {
+    public int compareTo(ru.isands.model.Position position) {
         return _position.compareTo(position);
     }
 
@@ -218,17 +218,17 @@ public class PositionWrapper implements Position, ModelWrapper<Position> {
     }
 
     @Override
-    public com.liferay.portal.model.CacheModel<Position> toCacheModel() {
+    public com.liferay.portal.model.CacheModel<ru.isands.model.Position> toCacheModel() {
         return _position.toCacheModel();
     }
 
     @Override
-    public Position toEscapedModel() {
+    public ru.isands.model.Position toEscapedModel() {
         return new PositionWrapper(_position.toEscapedModel());
     }
 
     @Override
-    public Position toUnescapedModel() {
+    public ru.isands.model.Position toUnescapedModel() {
         return new PositionWrapper(_position.toUnescapedModel());
     }
 
