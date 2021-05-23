@@ -1,6 +1,8 @@
 package ru.isands.portlet;
 
 import com.liferay.counter.service.CounterLocalServiceUtil;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 import ru.isands.model.Bank;
@@ -8,12 +10,12 @@ import ru.isands.service.BankLocalServiceUtil;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
-import javax.portlet.PortletException;
-import java.io.IOException;
+
 
 public class BankListingPortlet extends MVCPortlet {
-    public void addBank(ActionRequest actionRequest, ActionResponse actionResponse)
-            throws IOException, PortletException {
+    private static final Log _log = LogFactoryUtil.getLog(BankListingPortlet.class);
+
+    public void addBank(ActionRequest actionRequest, ActionResponse actionResponse) {
         try {
             String name = ParamUtil.getString(actionRequest, "name");
             long bik = ParamUtil.getLong(actionRequest, "bik");
@@ -29,23 +31,23 @@ public class BankListingPortlet extends MVCPortlet {
 
             BankLocalServiceUtil.addBank(bank);
         } catch (Exception e) {
+            _log.error("called method addBank");
             e.printStackTrace();
         }
     }
 
-    public void deleteBank(ActionRequest actionRequest, ActionResponse actionResponse)
-            throws IOException, PortletException {
+    public void deleteBank(ActionRequest actionRequest, ActionResponse actionResponse) {
         try {
             long bankId = ParamUtil.getLong(actionRequest, "bankId");
             BankLocalServiceUtil.deleteBank(bankId);
 
         } catch (Exception e) {
+            _log.error("called method deleteBank");
             e.printStackTrace();
         }
     }
 
-    public void editBank(ActionRequest actionRequest, ActionResponse actionResponse)
-            throws IOException, PortletException {
+    public void editBank(ActionRequest actionRequest, ActionResponse actionResponse) {
         try {
             long bankId = ParamUtil.getLong(actionRequest, "bankId");
             long bik = ParamUtil.getLong(actionRequest, "bik");
@@ -57,6 +59,7 @@ public class BankListingPortlet extends MVCPortlet {
 
             BankLocalServiceUtil.updateBank(bank);
         } catch (Exception e) {
+            _log.error("called method editBank");
             e.printStackTrace();
         }
     }

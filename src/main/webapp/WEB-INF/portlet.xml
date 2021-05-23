@@ -2,8 +2,8 @@
 
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
 	<portlet>
-		<portlet-name>EmployeeRegister</portlet-name>
-		<display-name>EmployeeRegister</display-name>
+		<portlet-name>Bank</portlet-name>
+		<display-name>Bank</display-name>
 		<portlet-class>ru.isands.portlet.BankListingPortlet</portlet-class>
 		<init-param>
 			<name>view-template</name>
@@ -14,9 +14,9 @@
 			<mime-type>text/html</mime-type>
 		</supports>
 		<portlet-info>
-			<title>EmployeeRegister</title>
-			<short-title>EmployeeRegister</short-title>
-			<keywords>EmployeeRegister</keywords>
+			<title>Bank</title>
+			<short-title>Bank</short-title>
+			<keywords>Bank</keywords>
 		</portlet-info>
 		<security-role-ref>
 			<role-name>administrator</role-name>
@@ -63,5 +63,34 @@
 		</security-role-ref>
 	</portlet>
 
-
+	<portlet>
+		<portlet-name>Employee</portlet-name>
+		<display-name>Employee</display-name>
+		<portlet-class>ru.isands.portlet.EmployeeListingPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/view/employee/main-employee.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Employee</title>
+			<short-title>Employee</short-title>
+			<keywords>Employee</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
 </portlet-app>
