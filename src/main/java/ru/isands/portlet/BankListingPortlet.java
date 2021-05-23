@@ -39,8 +39,8 @@ public class BankListingPortlet extends MVCPortlet {
     public void deleteBank(ActionRequest actionRequest, ActionResponse actionResponse) {
         try {
             long bankId = ParamUtil.getLong(actionRequest, "bankId");
-            BankLocalServiceUtil.deleteBank(bankId);
 
+            BankLocalServiceUtil.deleteBank(bankId);
         } catch (Exception e) {
             _log.error("called method deleteBank");
             e.printStackTrace();

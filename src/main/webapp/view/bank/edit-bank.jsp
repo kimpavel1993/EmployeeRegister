@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 <%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+
 <portlet:defineObjects/>
 
 <%
@@ -9,7 +10,7 @@
 %>
 
 <portlet:actionURL name="editBank" var="editBankURL">
-    <portlet:param name="bankId" value="<%=String.valueOf(bankId)%>"/>
+    <portlet:param name="bankId" value="<%= String.valueOf(bankId) %>"/>
 </portlet:actionURL>
 
 <aui:form action="<%= editBankURL %>" name="<portlet:namespace />fm">

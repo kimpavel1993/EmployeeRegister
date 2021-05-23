@@ -36,6 +36,7 @@ public class PositionListingPortlet extends MVCPortlet {
     public void deletePosition(ActionRequest actionRequest, ActionResponse actionResponse) {
         try {
             long positionId = ParamUtil.getLong(actionRequest, "positionId");
+
             PositionLocalServiceUtil.deletePosition(positionId);
         } catch (Exception e) {
             _log.error("called method deletePosition");

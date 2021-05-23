@@ -259,6 +259,16 @@ public class EmployeeLocalServiceUtil {
         return getService().invokeMethod(name, parameterTypes, arguments);
     }
 
+    public static java.util.List<ru.isands.model.Employee> findByName(
+        java.util.List<java.lang.String> name) {
+        return getService().findByName(name);
+    }
+
+    public static java.util.List<ru.isands.model.Employee> findByDate(
+        java.util.Date firstDate, java.util.Date lastDate) {
+        return getService().findByDate(firstDate, lastDate);
+    }
+
     public static void clearService() {
         _service = null;
     }

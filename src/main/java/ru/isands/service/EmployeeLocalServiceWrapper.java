@@ -269,6 +269,18 @@ public class EmployeeLocalServiceWrapper implements EmployeeLocalService,
             arguments);
     }
 
+    @Override
+    public java.util.List<ru.isands.model.Employee> findByName(
+        java.util.List<java.lang.String> name) {
+        return _employeeLocalService.findByName(name);
+    }
+
+    @Override
+    public java.util.List<ru.isands.model.Employee> findByDate(
+        java.util.Date firstDate, java.util.Date lastDate) {
+        return _employeeLocalService.findByDate(firstDate, lastDate);
+    }
+
     /**
      * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
      */

@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 <%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+
 <portlet:defineObjects/>
 
 <liferay-ui:search-container>
@@ -42,5 +43,5 @@
         <portlet:param name="mvcPath" value="/view/position/add-position.jsp"/>
     </portlet:renderURL>
 
-    <aui:button onClick="<%= addPositionURL%>" value="Add Position"/>
+    <aui:button onClick="<%= addPositionURL %>" value="Add Position"/>
 </aui:button-row>

@@ -264,26 +264,6 @@ public class BankLocalServiceWrapper implements BankLocalService,
         return _bankLocalService.invokeMethod(name, parameterTypes, arguments);
     }
 
-    @Override
-    public ru.isands.model.Bank addBank(java.lang.String name, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException {
-        return _bankLocalService.addBank(name, bik, streetAddress,
-            serviceContext);
-    }
-
-    @Override
-    public ru.isands.model.Bank updateBank(long bankId, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException {
-        return _bankLocalService.updateBank(bankId, bik, streetAddress,
-            serviceContext);
-    }
-
     /**
      * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
      */

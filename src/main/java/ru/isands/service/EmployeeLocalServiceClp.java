@@ -44,6 +44,10 @@ public class EmployeeLocalServiceClp implements EmployeeLocalService {
     private String[] _methodParameterTypes16;
     private String _methodName17;
     private String[] _methodParameterTypes17;
+    private String _methodName19;
+    private String[] _methodParameterTypes19;
+    private String _methodName20;
+    private String[] _methodParameterTypes20;
 
     public EmployeeLocalServiceClp(InvokableLocalService invokableLocalService) {
         _invokableLocalService = invokableLocalService;
@@ -131,6 +135,16 @@ public class EmployeeLocalServiceClp implements EmployeeLocalService {
         _methodName17 = "setBeanIdentifier";
 
         _methodParameterTypes17 = new String[] { "java.lang.String" };
+
+        _methodName19 = "findByName";
+
+        _methodParameterTypes19 = new String[] { "java.util.List" };
+
+        _methodName20 = "findByDate";
+
+        _methodParameterTypes20 = new String[] {
+                "java.util.Date", "java.util.Date"
+            };
     }
 
     @Override
@@ -640,5 +654,55 @@ public class EmployeeLocalServiceClp implements EmployeeLocalService {
         java.lang.String[] parameterTypes, java.lang.Object[] arguments)
         throws java.lang.Throwable {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.List<ru.isands.model.Employee> findByName(
+        java.util.List<java.lang.String> name) {
+        Object returnObj = null;
+
+        try {
+            returnObj = _invokableLocalService.invokeMethod(_methodName19,
+                    _methodParameterTypes19,
+                    new Object[] { ClpSerializer.translateInput(name) });
+        } catch (Throwable t) {
+            t = ClpSerializer.translateThrowable(t);
+
+            if (t instanceof RuntimeException) {
+                throw (RuntimeException) t;
+            } else {
+                throw new RuntimeException(t.getClass().getName() +
+                    " is not a valid exception");
+            }
+        }
+
+        return (java.util.List<ru.isands.model.Employee>) ClpSerializer.translateOutput(returnObj);
+    }
+
+    @Override
+    public java.util.List<ru.isands.model.Employee> findByDate(
+        java.util.Date firstDate, java.util.Date lastDate) {
+        Object returnObj = null;
+
+        try {
+            returnObj = _invokableLocalService.invokeMethod(_methodName20,
+                    _methodParameterTypes20,
+                    new Object[] {
+                        ClpSerializer.translateInput(firstDate),
+                        
+                    ClpSerializer.translateInput(lastDate)
+                    });
+        } catch (Throwable t) {
+            t = ClpSerializer.translateThrowable(t);
+
+            if (t instanceof RuntimeException) {
+                throw (RuntimeException) t;
+            } else {
+                throw new RuntimeException(t.getClass().getName() +
+                    " is not a valid exception");
+            }
+        }
+
+        return (java.util.List<ru.isands.model.Employee>) ClpSerializer.translateOutput(returnObj);
     }
 }

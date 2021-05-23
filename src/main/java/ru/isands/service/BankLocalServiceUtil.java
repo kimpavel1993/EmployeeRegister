@@ -255,23 +255,6 @@ public class BankLocalServiceUtil {
         return getService().invokeMethod(name, parameterTypes, arguments);
     }
 
-    public static ru.isands.model.Bank addBank(java.lang.String name, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException {
-        return getService().addBank(name, bik, streetAddress, serviceContext);
-    }
-
-    public static ru.isands.model.Bank updateBank(long bankId, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException {
-        return getService()
-                   .updateBank(bankId, bik, streetAddress, serviceContext);
-    }
-
     public static void clearService() {
         _service = null;
     }

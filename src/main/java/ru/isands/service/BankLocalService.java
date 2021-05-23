@@ -232,16 +232,4 @@ public interface BankLocalService extends BaseLocalService, InvokableLocalServic
     public java.lang.Object invokeMethod(java.lang.String name,
         java.lang.String[] parameterTypes, java.lang.Object[] arguments)
         throws java.lang.Throwable;
-
-    public ru.isands.model.Bank addBank(java.lang.String name, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException;
-
-    public ru.isands.model.Bank updateBank(long bankId, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException;
 }

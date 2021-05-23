@@ -235,4 +235,10 @@ public interface EmployeeLocalService extends BaseLocalService,
     public java.lang.Object invokeMethod(java.lang.String name,
         java.lang.String[] parameterTypes, java.lang.Object[] arguments)
         throws java.lang.Throwable;
+
+    public java.util.List<ru.isands.model.Employee> findByName(
+        java.util.List<java.lang.String> name);
+
+    public java.util.List<ru.isands.model.Employee> findByDate(
+        java.util.Date firstDate, java.util.Date lastDate);
 }

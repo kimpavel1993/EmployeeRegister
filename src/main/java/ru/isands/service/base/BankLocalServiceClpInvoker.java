@@ -45,16 +45,6 @@ public class BankLocalServiceClpInvoker {
     private String[] _methodParameterTypes40;
     private String _methodName41;
     private String[] _methodParameterTypes41;
-    private String _methodName46;
-    private String[] _methodParameterTypes46;
-    private String _methodName47;
-    private String[] _methodParameterTypes47;
-    private String _methodName48;
-    private String[] _methodParameterTypes48;
-    private String _methodName49;
-    private String[] _methodParameterTypes49;
-    private String _methodName50;
-    private String[] _methodParameterTypes50;
 
     public BankLocalServiceClpInvoker() {
         _methodName0 = "addBank";
@@ -140,32 +130,6 @@ public class BankLocalServiceClpInvoker {
         _methodName41 = "setBeanIdentifier";
 
         _methodParameterTypes41 = new String[] { "java.lang.String" };
-
-        _methodName46 = "addBank";
-
-        _methodParameterTypes46 = new String[] {
-                "java.lang.String", "long", "java.lang.String",
-                "com.liferay.portal.service.ServiceContext"
-            };
-
-        _methodName47 = "deleteBank";
-
-        _methodParameterTypes47 = new String[] { "ru.isands.model.Bank" };
-
-        _methodName48 = "deleteBank";
-
-        _methodParameterTypes48 = new String[] { "long" };
-
-        _methodName49 = "getBank";
-
-        _methodParameterTypes49 = new String[] { "long" };
-
-        _methodName50 = "updateBank";
-
-        _methodParameterTypes50 = new String[] {
-                "long", "long", "java.lang.String",
-                "com.liferay.portal.service.ServiceContext"
-            };
     }
 
     public Object invokeMethod(String name, String[] parameterTypes,
@@ -267,37 +231,6 @@ public class BankLocalServiceClpInvoker {
             BankLocalServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
 
             return null;
-        }
-
-        if (_methodName46.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
-            return BankLocalServiceUtil.addBank((java.lang.String) arguments[0],
-                ((Long) arguments[1]).longValue(),
-                (java.lang.String) arguments[2],
-                (com.liferay.portal.service.ServiceContext) arguments[3]);
-        }
-
-        if (_methodName47.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
-            return BankLocalServiceUtil.deleteBank((ru.isands.model.Bank) arguments[0]);
-        }
-
-        if (_methodName48.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
-            return BankLocalServiceUtil.deleteBank(((Long) arguments[0]).longValue());
-        }
-
-        if (_methodName49.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
-            return BankLocalServiceUtil.getBank(((Long) arguments[0]).longValue());
-        }
-
-        if (_methodName50.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes50, parameterTypes)) {
-            return BankLocalServiceUtil.updateBank(((Long) arguments[0]).longValue(),
-                ((Long) arguments[1]).longValue(),
-                (java.lang.String) arguments[2],
-                (com.liferay.portal.service.ServiceContext) arguments[3]);
         }
 
         throw new UnsupportedOperationException();

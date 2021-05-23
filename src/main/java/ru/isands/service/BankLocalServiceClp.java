@@ -44,10 +44,6 @@ public class BankLocalServiceClp implements BankLocalService {
     private String[] _methodParameterTypes16;
     private String _methodName17;
     private String[] _methodParameterTypes17;
-    private String _methodName19;
-    private String[] _methodParameterTypes19;
-    private String _methodName20;
-    private String[] _methodParameterTypes20;
 
     public BankLocalServiceClp(InvokableLocalService invokableLocalService) {
         _invokableLocalService = invokableLocalService;
@@ -135,20 +131,6 @@ public class BankLocalServiceClp implements BankLocalService {
         _methodName17 = "setBeanIdentifier";
 
         _methodParameterTypes17 = new String[] { "java.lang.String" };
-
-        _methodName19 = "addBank";
-
-        _methodParameterTypes19 = new String[] {
-                "java.lang.String", "long", "java.lang.String",
-                "com.liferay.portal.service.ServiceContext"
-            };
-
-        _methodName20 = "updateBank";
-
-        _methodParameterTypes20 = new String[] {
-                "long", "long", "java.lang.String",
-                "com.liferay.portal.service.ServiceContext"
-            };
     }
 
     @Override
@@ -655,89 +637,5 @@ public class BankLocalServiceClp implements BankLocalService {
         java.lang.String[] parameterTypes, java.lang.Object[] arguments)
         throws java.lang.Throwable {
         throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public ru.isands.model.Bank addBank(java.lang.String name, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException {
-        Object returnObj = null;
-
-        try {
-            returnObj = _invokableLocalService.invokeMethod(_methodName19,
-                    _methodParameterTypes19,
-                    new Object[] {
-                        ClpSerializer.translateInput(name),
-                        
-                    bik,
-                        
-                    ClpSerializer.translateInput(streetAddress),
-                        
-                    ClpSerializer.translateInput(serviceContext)
-                    });
-        } catch (Throwable t) {
-            t = ClpSerializer.translateThrowable(t);
-
-            if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
-                throw (com.liferay.portal.kernel.exception.PortalException) t;
-            }
-
-            if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
-                throw (com.liferay.portal.kernel.exception.SystemException) t;
-            }
-
-            if (t instanceof RuntimeException) {
-                throw (RuntimeException) t;
-            } else {
-                throw new RuntimeException(t.getClass().getName() +
-                    " is not a valid exception");
-            }
-        }
-
-        return (ru.isands.model.Bank) ClpSerializer.translateOutput(returnObj);
-    }
-
-    @Override
-    public ru.isands.model.Bank updateBank(long bankId, long bik,
-        java.lang.String streetAddress,
-        com.liferay.portal.service.ServiceContext serviceContext)
-        throws com.liferay.portal.kernel.exception.PortalException,
-            com.liferay.portal.kernel.exception.SystemException {
-        Object returnObj = null;
-
-        try {
-            returnObj = _invokableLocalService.invokeMethod(_methodName20,
-                    _methodParameterTypes20,
-                    new Object[] {
-                        bankId,
-                        
-                    bik,
-                        
-                    ClpSerializer.translateInput(streetAddress),
-                        
-                    ClpSerializer.translateInput(serviceContext)
-                    });
-        } catch (Throwable t) {
-            t = ClpSerializer.translateThrowable(t);
-
-            if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
-                throw (com.liferay.portal.kernel.exception.PortalException) t;
-            }
-
-            if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
-                throw (com.liferay.portal.kernel.exception.SystemException) t;
-            }
-
-            if (t instanceof RuntimeException) {
-                throw (RuntimeException) t;
-            } else {
-                throw new RuntimeException(t.getClass().getName() +
-                    " is not a valid exception");
-            }
-        }
-
-        return (ru.isands.model.Bank) ClpSerializer.translateOutput(returnObj);
     }
 }

@@ -30,45 +30,9 @@ import java.util.List;
  * @see ru.isands.service.BankLocalServiceUtil
  */
 public class BankLocalServiceImpl extends BankLocalServiceBaseImpl {
-    public Bank addBank(String name, long bik, String streetAddress,
-            ServiceContext serviceContext) throws PortalException, SystemException {
-        long bankId = counterLocalService.increment(Bank.class.getName());
-
-        Bank bank = bankPersistence.create(bankId);
-
-        bank.setName(name);
-        bank.setBik(bik);
-        bank.setStreetAddress(streetAddress);
-
-        super.addBank(bank);
-
-        return bank;
-    }
-
-    public Bank deleteBank(Bank bank) throws SystemException {
-        return bankPersistence.remove(bank);
-    }
-
-    public Bank deleteBank(long bankId) throws PortalException, SystemException {
-        Bank bank = bankPersistence.findByPrimaryKey(bankId);
-
-        return deleteBank(bank);
-    }
-
-    public Bank getBank(long bankId) throws SystemException, PortalException {
-        return bankPersistence.findByPrimaryKey(bankId);
-    }
-
-    public Bank updateBank(long bankId, long bik, String streetAddress,
-            ServiceContext serviceContext) throws PortalException, SystemException {
-
-        Bank bank = bankPersistence.findByPrimaryKey(bankId);
-
-        bank.setBik(bik);
-        bank.setStreetAddress(streetAddress);
-
-        super.updateBank(bank);
-
-        return bank;
-    }
+    /*
+     * NOTE FOR DEVELOPERS:
+     *
+     * Never reference this interface directly. Always use {@link ru.isands.service.EmployeeLocalServiceUtil} to access the employee local service.
+     */
 }

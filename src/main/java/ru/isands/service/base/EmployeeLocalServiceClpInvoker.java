@@ -45,6 +45,10 @@ public class EmployeeLocalServiceClpInvoker {
     private String[] _methodParameterTypes40;
     private String _methodName41;
     private String[] _methodParameterTypes41;
+    private String _methodName47;
+    private String[] _methodParameterTypes47;
+    private String _methodName48;
+    private String[] _methodParameterTypes48;
 
     public EmployeeLocalServiceClpInvoker() {
         _methodName0 = "addEmployee";
@@ -130,6 +134,16 @@ public class EmployeeLocalServiceClpInvoker {
         _methodName41 = "setBeanIdentifier";
 
         _methodParameterTypes41 = new String[] { "java.lang.String" };
+
+        _methodName47 = "findByName";
+
+        _methodParameterTypes47 = new String[] { "java.util.List" };
+
+        _methodName48 = "findByDate";
+
+        _methodParameterTypes48 = new String[] {
+                "java.util.Date", "java.util.Date"
+            };
     }
 
     public Object invokeMethod(String name, String[] parameterTypes,
@@ -231,6 +245,17 @@ public class EmployeeLocalServiceClpInvoker {
             EmployeeLocalServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
 
             return null;
+        }
+
+        if (_methodName47.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
+            return EmployeeLocalServiceUtil.findByName((java.util.List<java.lang.String>) arguments[0]);
+        }
+
+        if (_methodName48.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
+            return EmployeeLocalServiceUtil.findByDate((java.util.Date) arguments[0],
+                (java.util.Date) arguments[1]);
         }
 
         throw new UnsupportedOperationException();

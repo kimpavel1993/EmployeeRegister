@@ -28,9 +28,7 @@ public class EmployeeListingPortlet extends MVCPortlet {
             Date birthdayDate = ParamUtil.getDate(actionRequest, "birthdayDate", df);
 
             long positionId = ParamUtil.getLong(actionRequest, "positionId");
-
             Date employmentDate = ParamUtil.getDate(actionRequest, "employmentDate", df);
-
             String salary = ParamUtil.getString(actionRequest, "salary");
             String workPhone = ParamUtil.getString(actionRequest, "workPhone");
             String mobilePhone = ParamUtil.getString(actionRequest, "mobilePhone");
@@ -64,6 +62,7 @@ public class EmployeeListingPortlet extends MVCPortlet {
     public void deleteEmployee(ActionRequest actionRequest, ActionResponse actionResponse) {
         try {
             long employeeId = ParamUtil.getLong(actionRequest, "employeeId");
+
             EmployeeLocalServiceUtil.deleteEmployee(employeeId);
         } catch (Exception e) {
             _log.error("called method deleteEmployee");
@@ -83,15 +82,12 @@ public class EmployeeListingPortlet extends MVCPortlet {
             Date birthdayDate = ParamUtil.getDate(actionRequest, "birthdayDate", df);
 
             long positionId = ParamUtil.getLong(actionRequest, "positionId");
-
             Date employmentDate = ParamUtil.getDate(actionRequest, "employmentDate", df);
-
             String salary = ParamUtil.getString(actionRequest, "salary");
             String workPhone = ParamUtil.getString(actionRequest, "workPhone");
             String mobilePhone = ParamUtil.getString(actionRequest, "mobilePhone");
             long bankId = ParamUtil.getLong(actionRequest, "bankId");
             boolean isArchived = ParamUtil.getBoolean(actionRequest, "isArchived");
-
 
             Employee employee = EmployeeLocalServiceUtil.getEmployee(employeeId);
             employee.setLastName(lastName);
